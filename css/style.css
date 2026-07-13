@@ -258,7 +258,6 @@
             flex: 1;
             width: auto;
             margin: var(--spacing-3) var(--spacing-4);
-            /
         }
         
         .cta-button:hover {

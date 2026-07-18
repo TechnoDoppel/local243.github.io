@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPSEU/SEFPO Local 243</title>
     <link rel="icon" href="./images/common/favicon.png" sizes="16x16">
-    <link rel="apple-touch-icon" href="./images/common/favicon.png">
+    <link rel="apple-touch-icon" href="./images/common/favicon.png" ">
 	<meta name="msapplication-TileImage " content="./images/common/favicon.png "">
     <meta name="description" content="OPSEU SEFPO Local 243 Information and Support">
-    <meta name="keywords" content="OPSEU, OPSEU SEFPO Local 243, union, support, CAAT-S, full-time, part-time, Niagara College, collective agreement, stewards, officers, public education, labour union, Ontario, SEFPO">
+    <meta name="keywords" content="OPSEU, OPSEU SEPCO Local 243, union, support, CAAT-S, full-time, part-time, Niagara College, collective agreement, stewards, officers, public education, labour union, Ontario, SEFPO">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="OPSEU SEFPO Local 243">
     <meta property="og:description" content="Support staff stands united for quality public education, fairness, and respect.">
@@ -227,12 +227,29 @@
         <h2 class="mb-5">Contact OPSEU SEFPO Local 243</h2>
         <div class="text-wrapper text-center mb-5">
             <p class="fs-lg">For general inquiries, membership questions, or media requests, please use the form below. We will get back to you as soon as possible.</p>
+            <p>Do not include confidential grievance, medical, accommodation, disciplinary, or other sensitive employment information.</p>
         </div>
-        <form class="contact-form">
-            <input type="text" name="contact_name" id="contact_name" placeholder="Your Name" required>
-            <input type="email" name="contact_email" id="contact_email" placeholder="Email Address" required>
-            <textarea name="contact_message" id="contact_message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="cta-button">Send a message to Local 243</button>
+        <form id="contact-form" class="contact-form" method="post" action="#contact">
+            <fieldset id="contact-fields" class="contact-form-fields" disabled>
+                <legend class="visually-hidden">Contact information</legend>
+
+                <label for="contact_name">Your name</label>
+                <input type="text" name="contact_name" id="contact_name" autocomplete="name" maxlength="100" required>
+
+                <label for="contact_email">Email address</label>
+                <input type="email" name="contact_email" id="contact_email" autocomplete="email" maxlength="254" required>
+
+                <label for="contact_message">Your message</label>
+                <textarea name="contact_message" id="contact_message" rows="8" minlength="10" maxlength="3000" required></textarea>
+
+                <button id="contact-submit" type="submit" class="cta-button" disabled>Loading contact form&hellip;</button>
+            </fieldset>
+
+            <p id="contact-status" class="contact-status" role="status" aria-live="polite" aria-atomic="true">Initializing the contact form&hellip;</p>
+
+            <noscript>
+                <p>The contact form requires JavaScript. Please email <a href="mailto:local243@gmail.com">local243@gmail.com</a>.</p>
+            </noscript>
         </form>
     </section>
 
